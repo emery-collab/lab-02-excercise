@@ -1,2 +1,18 @@
 Answer written questions 1 and 2 here.
 
+1. The coordinate system is as follows: the top of the screen is y = 0, the bottom is y = window height
+   The left side of the screen is x = 0 and the right side of the screen is x = window width
+   As such, the coordinate system has x increasing from left to right and y increasing from top to bottom, respectively.
+
+   You use the y and x, respectively in the atan standard library function to get an angle theta, which you then
+   feed into both cos and sin for the x and y position vector that you will increment the bullet by every frame.
+   Adding cos(theta) and sin(theta) onto the bullet position moves it in the desired direction
+   I am surprised/confused with how the atan takes y and x inverted and how the angles seem backwards at some points, 
+   but it works when i use the trig functions on theta to get x and y via cos and sin.
+   As per the additional notes, the "angles are still defined to rotate from the x-axis to the y-axis" but the y axis points 
+   backwards which is odd.
+
+2. The benefit seems to be that we can modify all the things we want to modify asynchronously from capturing inputs.
+   This seems to build on a different structure where we can use the inputs elsewhere when and where we want, but we capture
+   them altogether at once.
+   I feel like this is nice but if we may also capture unnecessary outputs if we don't end up using them.
