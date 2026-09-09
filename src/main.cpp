@@ -315,10 +315,7 @@ private:
                     // TODO: Add Explosion Sound Effect
                     // Play explosion sound!
 
-                    // assert mExplosionSound loaded properly
-                    assert(mExplosionSound){
-                        mExplosionSound.play();
-                    }
+                    mExplosionSound.play();
                     
                     break;  // Bullet can only hit one asteroid
                 }
@@ -339,10 +336,7 @@ private:
             // get the spaceship position and radius via the provided getter functions
                 if (circlesIntersect(asteroid.shape.getPosition(), asteroid.shape.getRadius(), mSpaceship.getPosition(), mSpaceship.hitboxRadius())){
                     asteroid.isAlive = false;
-                    //assert the explosion sound imported properly
-                    assert(mExplosionSound){
-                        mExplosionSound.play();
-                    }
+                    mExplosionSound.play();
                 }
         }
     }
